@@ -15,15 +15,7 @@ using System.Text.Json;
 
 namespace TestMQTT
 {
-    public class WeatherForecast
-    {
-        public DateTimeOffset Date { get; set; }
-        public int TemperatureCelsius { get; set; }
-        public string Summary { get; set; }
-    }
-
-
-    public partial class Form1 : Form
+     public partial class Form1 : Form
     {        
         private string mqttServer = "broker.hivemq.com";
         private string clientID = "DTI_CANSAT_GROUND";
@@ -104,5 +96,12 @@ namespace TestMQTT
         {
             mqttClient.Disconnect();
         }
+    }
+
+    public class WeatherForecast
+    {
+        public DateTimeOffset Date { get; set; }
+        public int TemperatureCelsius { get; set; }
+        public string Summary { get; set; }
     }
 }
